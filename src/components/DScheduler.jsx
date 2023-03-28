@@ -1,33 +1,63 @@
-import React from "react";
+import React, { useState } from "react";
 import Paper from "@mui/material/Paper";
-import { ViewState } from "@devexpress/dx-react-scheduler";
 import {
+  ViewState,
+  EditingState,
+  IntegratedEditing,
+} from "@devexpress/dx-react-scheduler";
+import {
+  Toolbar,
+  DateNavigator,
+  TodayButton,
   Scheduler,
+  WeekView,
+  MonthView,
   DayView,
+  AllDayPanel,
   Appointments,
+  AppointmentForm,
+  AppointmentTooltip,
+  ConfirmationDialog,
+  ViewSwitcher,
 } from "@devexpress/dx-react-scheduler-material-ui";
 
-const currentDate = "2018-11-01";
-const schedulerData = [
-  {
-    startDate: "2018-11-01T09:45",
-    endDate: "2018-11-01T11:00",
-    title: "Meeting",
-  },
-  {
-    startDate: "2018-11-01T12:00",
-    endDate: "2018-11-01T13:30",
-    title: "Go to a gym",
-  },
-];
-
 const DScheduler = () => {
+  const [currentViewName, setCurrentViewName] = useState("work-week");
+  const [currentDate, setCurrentDate] = useState();
   return (
     <Paper>
-      <Scheduler data={schedulerData}>
-        <ViewState currentDate={currentDate} />
-        <DayView startDayHour={9} endDayHour={14} />
+      <Scheduler height={900}>
+        <ViewState
+          currentDate={currentDate}
+          onCurrentDateChange={(date) => {
+            setCurrentDate(date);
+          }}
+          currentViewName={currentViewName}
+          onCurrentViewNameChange={(name) => {
+            setCurrentViewName(name);
+          }}
+        />
+        <EditingState />
+        <IntegratedEditing />
+        <WeekView startDayHour={10} endDayHour={19} />
+        <WeekView
+          name="work-week"
+          displayName="Work Week"
+          excludedDays={[0, 6]}
+          startDayHour={9}
+          endDayHour={19}
+        />
+        <MonthView />
+        <DayView />
+        <Toolbar />
+        <ViewSwitcher />
+        <DateNavigator />
+        <AllDayPanel />
+        <ConfirmationDialog />
         <Appointments />
+        <AppointmentTooltip showOpenButton showDeleteButton />
+        <AppointmentForm />
+        <TodayButton />
       </Scheduler>
     </Paper>
   );
