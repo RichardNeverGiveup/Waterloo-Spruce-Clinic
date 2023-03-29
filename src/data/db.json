@@ -1,0 +1,35 @@
+{
+  "schedules": [
+    {
+      "title": "Meeting with patient robert",
+      "startDate": "2023-03-28T15:42:42.331",
+      "endDate": "2023-03-28T17:42:42.331",
+      "id": 0,
+      "location": "unit101"
+    },
+    {
+      "title": "Discuss with Dr. Strange",
+      "startDate": "2023-03-31T08:42:42.331",
+      "endDate": "2023-03-31T09:42:42.331",
+      "id": 1,
+      "location": "unit102"
+    },
+    {
+      "2": {
+        "title": "Final Budget Review and Team Building project discuss"
+      },
+      "title": "Final Budget Review",
+      "startDate": "2023-03-30T09:42:42.331",
+      "endDate": "2023-03-30T12:42:42.331",
+      "id": 2,
+      "location": "unit201"
+    },
+    {
+      "title": "Meeting with patient Jessica",
+      "startDate": "2023-03-28T11:42:42.331",
+      "endDate": "2023-03-28T13:42:42.331",
+      "id": 3,
+      "location": "unit101"
+    }
+  ]
+}
