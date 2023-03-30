@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Practice and self-learn MERN stack and PERN stack.
 - Attempt some new features to my previous work."
 
-## Requirements (things i want to do)
+## Requirements (feel free to make suggestions)
 
 - clinic employees scheduler
 - Patient login page
@@ -17,8 +17,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Employees register login account for patients
 - Automatically sent registeration email to patients email
 
-## features (things i have done)
+## features
 
 - Calendar Scheduler for clinic employees
 - Public Page
 - DashBoard page for employees
+
+## Scripts
+
+### Install Dev Package
+yarn install
+
+### Start Dev Server
+yarn run start
