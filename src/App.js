@@ -2,10 +2,11 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Public from "./components/Public";
 import Login from "./features/auth/Login";
+import LoginP from "./features/auth/LoginP";
+
 import DashLayout from "./components/DashLayout";
 import Welcome from "./features/auth/Welcome";
-import NotesList from "./features/notes/NotesList";
-import UsersList from "./features/users/UsersList";
+import PatientsList from "./features/patient/PatientsList";
 import Appointment from "./components/Appointment";
 
 import DScheduler from "./components/DScheduler";
@@ -17,16 +18,16 @@ function App() {
         <Route index element={<Public />} />
         <Route path="appointment" element={<Appointment />} />
         <Route path="loginE" element={<Login />} />
-        <Route path="loginP" element={<Login />} />
+        <Route path="loginP" element={<LoginP />} />
 
         <Route path="dash" element={<DashLayout />}>
           <Route index element={<Welcome />} />
-          <Route path="notes">
+          <Route path="patients">
             {/* {we can add edit notes, add notes... under this path} */}
-            <Route index element={<NotesList />} />
+            <Route index element={<PatientsList />} />
           </Route>
-          <Route path="users">
-            <Route index element={<UsersList />} />
+          <Route path="schedules">
+            <Route index element={<DScheduler />} />
           </Route>
         </Route>
       </Route>

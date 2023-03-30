@@ -106,7 +106,7 @@ const DScheduler = () => {
         "Error: something bad happened, check browser console or reflash current page to synchronize backend data"
       ) : (
         <Paper>
-          <Scheduler height={900} data={schedules}>
+          <Scheduler height={645} data={schedules}>
             <ViewState
               currentDate={currentDate}
               onCurrentDateChange={(date) => {
