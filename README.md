@@ -7,7 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Imitate the project that I worked on in my previous job.
 - Build some custom requirements to showcase my skills.
 - Practice and self-learn MERN stack and PERN stack.
-- Attempt some new features to my previous work."
 
 ## Requirements (feel free to make suggestions)
 
